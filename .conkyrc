@@ -36,7 +36,7 @@ ${goto 80}${color1}${font Droid Sans:style=Bold:size=12}${color1}${sysname}${col
 ${voffset 90}${goto 20}${font Droid Sans:style=bold:size=30}${time %H:%M}${font}${goto 175}${font Droid Sans:style=Bold:size=11}T°C
 ${goto 175}${font Droid Sans:style=Bold:size=11}${color1}${acpitemp}°C
 ${voffset 40}${goto 35}CPU0-1${color1}${goto 128}CPU2-3
-${goto 38}${font Droid Sans:style=Bold:size=10}${cpu cpu0}-${cpu cpu1}%${goto 134}${font Droid Sans:style=Bold:size=11}${cpu cpu2}-${cpu cpu3}%${font Droid Sans:style=Bold:size=11}${color1}${font}
+${goto 38}${font Droid Sans:style=Bold:size=10}${cpu cpu1}-${cpu cpu2}%${goto 134}${font Droid Sans:style=Bold:size=11}${cpu cpu3}-${cpu cpu4}%${font Droid Sans:style=Bold:size=11}${color1}${font}
 ${font Droid Sans:style=Bold:size=11}${font}
 ${voffset 10}${goto 90}${font Droid Sans:style=Bold:size=11}RAM
 ${goto 90}${font Droid Sans:style=Bold:size=11}${memperc}%
