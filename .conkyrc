@@ -30,16 +30,27 @@ own_window_colour 000000
 own_window_argb_value 0
 
 TEXT
-${goto 180}${color0}${font Droid Sans:style=bold:size=13}${voffset 40}${exec whoami}
+${goto 180}${color0}${font Droid Sans:style=bold:size=13}${voffset 35}${exec whoami}
 ${voffset -30}${font Droid Sans:style=Bold:size=12}${color}${goto 40}${uptime}
 ${goto 80}${color1}${font Droid Sans:style=Bold:size=12}${color1}${sysname}${color}${font}
-${voffset 90}${goto 20}${font Droid Sans:style=bold:size=30}${time %H:%M}${font}${goto 175}${font Droid Sans:style=Bold:size=11}T°C
-${goto 175}${font Droid Sans:style=Bold:size=11}${color1}${acpitemp}°C
-${voffset 40}${goto 35}CPU0-1${color1}${goto 128}CPU2-3
-${goto 38}${font Droid Sans:style=Bold:size=10}${cpu cpu1}-${cpu cpu2}%${goto 134}${font Droid Sans:style=Bold:size=11}${cpu cpu3}-${cpu cpu4}%${font Droid Sans:style=Bold:size=11}${color1}${font}
+##### temporarily disabled time and stuff
+#${voffset 86}${goto 20}${font Droid Sans:style=bold:size=30}${time %H:%M}${font}${goto 175}${font Droid Sans:style=Bold:size=11}T°C
+#${voffset 118}${font}${goto 175}${font Droid Sans:style=Bold:size=11}T°C
+#${goto 175}${font Droid Sans:style=Bold:size=11}${color1}${acpitemp}°C
+#${voffset 40}${goto 35}CPU0-1${color1}${goto 128}CPU2-3
+#${goto 38}${font Droid Sans:style=Bold:size=10}${cpu cpu1}-${cpu cpu0}%${goto 134}${font Droid Sans:style=Bold:size=11}${cpu cpu3}-${cpu cpu4}%${font Droid Sans:style=Bold:size=11}${color1}${font}
+#####
+${voffset 40}${font Droid Sans:style=Bold:size=11}${goto 128}CPU0
+${font Droid Sans:style=Bold:size=11}${goto 128}${cpu cpu1}%
+${voffset 40}${font Droid Sans:style=Bold:size=11}${goto 88}CPU1${goto 175}${font Droid Sans:style=Bold:size=11}CPU2
+${font Droid Sans:style=Bold:size=11}${goto 88}${cpu cpu2}%${goto 175}${font Droid Sans:style=Bold:size=11}${color1}${cpu cpu3}%
+${voffset 40}${goto 45}T°C${color1}${goto 128}CPU3
+${goto 45}${font Droid Sans:style=Bold:size=10}${acpitemp}°C${goto 134}${font Droid Sans:style=Bold:size=11}${cpu cpu4}%${font Droid Sans:style=Bold:size=11}${color1}${font}
 ${font Droid Sans:style=Bold:size=11}${font}
 ${voffset 10}${goto 90}${font Droid Sans:style=Bold:size=11}RAM
 ${goto 90}${font Droid Sans:style=Bold:size=11}${memperc}%
+#${goto 170}${font Droid Sans:style=Bold:size=11}${freq_g 1}-${freq_g 3}
+
 
 ${image ~/conky/conkypic/lsd.png -p 10,0}
 #${image /usr/share/conkypic/lsd.png -p 10,0}
