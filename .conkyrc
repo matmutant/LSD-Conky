@@ -49,7 +49,9 @@ ${goto 45}${font Droid Sans:style=Bold:size=10}${acpitemp}°C${goto 134}${font D
 ${font Droid Sans:style=Bold:size=11}${font}
 ${voffset 10}${goto 90}${font Droid Sans:style=Bold:size=11}RAM
 ${goto 90}${font Droid Sans:style=Bold:size=11}${memperc}%
-
+#Add possibility to display GPU T°C as well, but eats more ressources. (comment the two above lines, and search for the right expression first : your GPU may not be monitored as 'radeon-pci-0100')
+#${voffset 10}${goto 90}${font Droid Sans:style=Bold:size=11}GPU°${goto 175}${font Droid Sans:style=Bold:size=11}RAM
+#${goto 90}${font Droid Sans:style=Bold:size=11}${exec sensors radeon-pci-0100 -A | head -n2 | tail -n1 | gawk '{ printf $2 }' | sed 's/+//'}${goto 175}${font Droid Sans:style=Bold:size=11}${memperc}%
 
 ${image ~/conky/conkypic/lsd.png -p 10,0}
 #${image /usr/share/conkypic/lsd.png -p 10,0}
